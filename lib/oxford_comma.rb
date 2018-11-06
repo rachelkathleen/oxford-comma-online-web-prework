@@ -4,12 +4,13 @@ def oxford_comma(array)
       array.join
     elsif array.length == 2
       array.join(" and ")
-    else
+    elsif array.length > 2
       last_item = array.last
       and_last_item = last_item + "and "
       array.pop
       array << and_last_item
       array.join(", ")
-    end
+    else
+      nil
     end
   end
